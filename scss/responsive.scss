@@ -1,0 +1,59 @@
+@import "config.scss";
+
+/* handhelds, this applies to all handheld devices  */
+@media only screen and (max-width: 759px) {
+	.header-wrapper .header .navigation {
+		li {
+			&.current, &.section {
+				/* don't display the current icon, it wouldn't look good if the navigation has 2 rows */
+				background: none;
+			}
+		}
+	}
+	.footer {
+		.seperator {
+			/* in the desktop version we use a seperator for footer entrys, but disable it here */
+			display: none;
+		}
+		.break {
+			/* but for handhelds display the .break element, so we get a new line */
+			display: inline;
+		}
+	}
+}
+
+/* this applies to handhelds in landscape orientation / tablests */
+@media only screen and (min-width: 480px) and (max-width: 759px) {
+	.layout-wrapper .layout .column {
+		/* set the width so we can palce 2 columns next to each other */
+		width: $tablet-column-width; 
+	
+		&.subnavigation,
+		&.big {
+			/* big column should stay alone now */
+			width: auto;
+			float: none;
+			clear: both;
+		}
+		&.columns-3perrow-newrow {
+			/* in the desktop layout we have 3 per row, so disable it here */
+			clear: none;
+		}
+		&.columns-2perrow-newrow {
+			/* in this layout we have 2 per row, so enable it  */
+			clear: both;
+		}
+	}
+}
+
+/* this applies to handhelds in portrait orientation */
+@media only screen and (max-width: 479px) {
+	.layout-wrapper .layout {
+		.column, .column.subnavigation, .column.big {
+			/* screen is to small to have 2 columns next to each other */
+			width: auto;
+			float: none;
+			clear: both;
+		}
+	}
+}

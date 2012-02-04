@@ -1,0 +1,42 @@
+// some configs, on colors and sizes of the website
+// here you can easily change the whole look of the website.
+// almost all colors used in the theme get calculated from the colors defined here
+// so you can only need to change a few lines to change everything
+// if you are a fan of fancy colors, try to set the following:
+// $base-color to #FF00DC
+// $wrapper-color #6A009F
+// text-color to #FFDFF8
+// and see your self how easy it is
+
+
+// used for the html background
+$base-color: #E9E9E9;
+$background: $base-color image-url("bg.png");
+
+// used for the header background, content background, ...
+$wrapper-color: #FFF;
+$wrapper-background: $wrapper-color;
+
+
+$text-color: #727272;
+$text-color-light: lighten($text-color, 15%);
+$text-color-dark: darken($text-color, 15%);
+$link-color: darken($text-color, 30%);
+
+$layout-max-width: 900px; // max width, becuase we use % for width
+$layout-width: 90%; // using % for width to keep the website scaleable, but px will work well too
+$column-width: 29%;
+// calculate padding for columns, 3 columns with padding right and left, makes it 6 times padding
+$column-padding: (100% - $column-width * 3) / 6;
+// calculate width for big column (size of 2 columns + the padding between the 2 columns)
+$column-big-width: ($column-width * 2 + $column-padding * 2);
+// calculate with for a column on tablet, which will be something about 45% since we only have 2 columns in each row
+$tablet-column-width: (100% - $column-padding * 4) / 2;
+
+// Cross Browser alpha background colour mixin
+@mixin rgba-background($color, $opacity) {
+	$rgba: rgba($color, $opacity);
+	$IEcolor: ie_hex_str($rgba);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$IEcolor}', endColorstr='#{$IEcolor}', GradientType=0 );
+	background: $rgba;
+}

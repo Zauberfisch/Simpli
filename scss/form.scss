@@ -1,0 +1,104 @@
+@import "compass/css3";
+@import "config.scss";
+
+/* FIELDSETS
+---------------------------------------- */
+fieldset {
+	border: 0;
+}
+
+/* ACTION BUTTONS
+---------------------------------------- */
+input.action {
+	padding: 4px;
+	margin: 4px 0;
+	background: $base-color;
+	border: 1px solid $text-color-light;
+	@include border-radius(3px);
+	
+	&:hover {
+		/* fade in effect */
+		cursor: pointer;
+		background: darken($base-color, 3%);
+		@include transition(background 0.5s ease-out 0s);
+	}
+	&:focus {
+		background: darken($base-color, 6%);
+		border: 1px solid $text-color;
+	}
+}
+
+/* FIELD FORMATING
+---------------------------------------- */
+form ul {
+	list-style: none;
+}
+.middleColumn {
+ 	display: block;
+ 	margin: 15px 10px 10px 0;
+	width: 292px;
+	padding: 4px;
+	clear: left;
+	border: 1px solid $text-color-light;
+	@include border-radius(3px);
+	
+	.middleColumn {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0;
+	}
+}
+	
+/* INPUT BOXS
+---------------------------------------- */
+
+input.text, textarea, select {
+	padding: 0;
+	font-size: 12px;
+	font-weight: bold;
+	width: 292px;
+	border: 0;
+	background: transparent;
+}
+
+textarea {
+	font-size: 12px;
+	border: 0;
+}
+
+/* SELECT DROPDOWN
+---------------------------------------- */
+
+select {
+	width: auto;
+}
+
+/* LABELS
+---------------------------------------- */
+.typography label {
+ 	display: block;
+	margin: 10px 0 -10px 0;
+	font-size: 12px;
+}
+
+label.right {
+	display: inline;
+}
+
+/* CHECKBOXES
+---------------------------------------- */
+ul.optionset {
+	margin: 0;
+	overflow: hidden;
+}
+	ul.optionset li {
+		margin: 6px 0;
+		clear: both;
+	}
+		ul.optionset li input {
+			float: left;
+			margin: 0 6px;
+		}
+		ul.optionset li label {
+			margin: 0;
+		}

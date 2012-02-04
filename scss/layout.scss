@@ -1,0 +1,157 @@
+@import "compass/css3";
+@import "compass/utilities";
+
+@import "config.scss";
+
+/* get a sprite image from the social icons */
+@import "socialmediaicons/*.png";
+
+	
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background: $background;
+	/* disables iphone font size increase */
+	-webkit-text-size-adjust: none;
+}
+
+body {
+	color: $text-color;
+	font-size: 12px;
+	font-family: Verdana, Arial;
+	padding: 0 0 10px;
+}
+
+a {
+	color: $link-color;
+	font-weight: bold;
+	text-decoration: none;
+	
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.clear {
+	clear: both;
+}
+
+@import "header";
+
+@import "footer";
+
+/* Layout
+---------------------------------------- */
+.layout-wrapper {
+	padding: 10px 10px 0;
+	
+	.layout {
+		width: $layout-width;
+		max-width: $layout-max-width;
+		margin: 0 auto;
+		padding: 0 0 10px 0;
+		background: $wrapper-background;
+		border: 1px solid darken($base-color, 5%);
+		@include box-shadow(0px 0px 1px 0px darken($base-color, 10%));
+		overflow: hidden;
+		@include border-radius(5px);
+		
+		.column {
+			width: $column-width;
+			padding: $column-padding;
+			float: left;
+			
+			&.subnavigation {
+				/* subnavigation on the right, only displayed if children are avaliable */
+				float: right;
+				
+				h3 {
+					margin: 0 0 5px;
+				}
+				ul {
+					list-style: none;
+					
+					li {
+						margin: 0;
+						border-top: 1px dashed $text-color-light;
+						display: block;
+						
+						&.last {
+							border-bottom: 1px dashed $text-color-light;
+						}
+						a {
+							display: block;
+							padding: 7px 0;
+							font-size: 12px;
+							
+							&.current {
+								text-decoration: underline;
+							}
+						}
+						li {
+							padding-left: 15px;
+						}
+					}
+				}
+			}
+			&.big {
+				/* big content, size of 2 columns */
+				width: $column-big-width;
+			}
+			&.full {
+				/* full size conteint, no sidebar */
+				width: auto;
+				float: none;
+				clear: both;
+			}
+			* {
+				/* scale down elements if they are bigger than the content box */
+				/* make sure that you don't set a height on images that you expect to scale down, */
+				/* because if you do, this means only width scales, but height stays the same and ration gets lost */
+				max-width: 100%;
+			}
+		}
+		.widgets-bottom .columns-3perrow-newrow {
+			/* we have 3 widgets in a row, after the 3rd element, create a new line */
+			clear: both;
+		}
+	}
+	.socialmedia-wrapper {
+		overflow: hidden;
+		text-align: center;
+		margin: -16px 0 0;
+		
+		.socialmedia {
+			padding: 5px;
+			margin: 2px 0;
+			display: inline-block;
+			/* use rgba background instead of opacity to avoid nested opacity */
+			@include rgba-background($wrapper-background, 0.5);
+			border: 1px solid darken($base-color, 5%);
+			@include box-shadow(0px 0px 1px 0px darken($base-color, 10%));
+			@include border-radius(3px);
+		
+			a {
+				@include opacity(0.7);
+				height: 18px;
+				width: 18px;
+				margin: 0 2px;
+				display: inline-block;
+				text-indent: -9999px;
+				
+				&:hover {
+					@include opacity(0.9);
+					/* fade in effect */
+					@include transition(opacity 0.5s ease-out 0s);
+					text-decoration: none;
+				}
+			}
+		}
+		/* include all icons as css classes (eg: .socialmediaicons-facebook) */
+		/* see ../images/socialmediaicons for all avaliable icons */
+		@include all-socialmediaicons-sprites;
+	}
+}

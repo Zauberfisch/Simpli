@@ -1,0 +1,201 @@
+/* get a sprite image from the social icons */
+.socialmediaicons-sprite, .layout-wrapper .socialmedia-wrapper .socialmediaicons-facebook, .layout-wrapper .socialmedia-wrapper .socialmediaicons-flickr, .layout-wrapper .socialmedia-wrapper .socialmediaicons-twitter, .layout-wrapper .socialmedia-wrapper .socialmediaicons-youtube {
+  background: url('../images/socialmediaicons-s19e97c8559.png') no-repeat; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  background: #e9e9e9 url('../images/bg.png?1328375397');
+  /* disables iphone font size increase */
+  -webkit-text-size-adjust: none; }
+
+body {
+  color: #727272;
+  font-size: 12px;
+  font-family: Verdana, Arial;
+  padding: 0 0 10px; }
+
+a {
+  color: #262626;
+  font-weight: bold;
+  text-decoration: none; }
+a:hover {
+  text-decoration: underline; }
+
+.clear {
+  clear: both; }
+
+.header-wrapper {
+  background: white;
+  border-bottom: 1px solid #dcdcdc;
+  -moz-box-shadow: 0px 0px 1px 0px #d0d0d0;
+  -webkit-box-shadow: 0px 0px 1px 0px #d0d0d0;
+  -o-box-shadow: 0px 0px 1px 0px #d0d0d0;
+  box-shadow: 0px 0px 1px 0px #d0d0d0;
+  padding: 10px 10px 0 10px; }
+.header-wrapper .header {
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto; }
+.header-wrapper .header .logo {
+  padding: 10px 10px 10px 70px;
+  background: url('../images/logo.png?1329648822') no-repeat left center;
+  float: left; }
+.header-wrapper .header .logo h1 {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #4c4c4c; }
+.header-wrapper .header .logo p {
+  font-weight: bold;
+  font-size: 12px;
+  color: #4c4c4c; }
+.header-wrapper .header .navigation {
+  float: right;
+  list-style: none;
+  padding: 20px 0 0; }
+.header-wrapper .header .navigation li {
+  float: left;
+  margin: 0 0 -2px 10px;
+  display: block; }
+.header-wrapper .header .navigation li a {
+  color: #727272;
+  font-weight: normal;
+  font-size: 13px;
+  display: block;
+  padding: 15px; }
+.header-wrapper .header .navigation li a:hover {
+  color: #262626;
+  /* fade in effect */
+  -moz-transition: color 0.5s ease-out 0s;
+  -webkit-transition: color 0.5s ease-out 0s;
+  -o-transition: color 0.5s ease-out 0s;
+  transition: color 0.5s ease-out 0s;
+  text-decoration: none; }
+.header-wrapper .header .navigation li.current, .header-wrapper .header .navigation li.section {
+  background: url('../images/current.png?1328442147') no-repeat center bottom; }
+.header-wrapper .header .navigation li.current a, .header-wrapper .header .navigation li.section a {
+  color: #4c4c4c;
+  font-weight: bold; }
+
+.footer {
+  margin: 10px 0;
+  text-align: center;
+  line-height: 18px; }
+.footer .break {
+  /* don't remove the line break on default, we only use breaks in the footer on smaller screens */
+  display: none; }
+
+/* Layout
+---------------------------------------- */
+.layout-wrapper {
+  padding: 10px 10px 0; }
+.layout-wrapper .layout {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 0 10px 0;
+  background: white;
+  border: 1px solid #dcdcdc;
+  -moz-box-shadow: 0px 0px 1px 0px #d0d0d0;
+  -webkit-box-shadow: 0px 0px 1px 0px #d0d0d0;
+  -o-box-shadow: 0px 0px 1px 0px #d0d0d0;
+  box-shadow: 0px 0px 1px 0px #d0d0d0;
+  overflow: hidden;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px; }
+.layout-wrapper .layout .column {
+  width: 29%;
+  padding: 2.167%;
+  float: left; }
+.layout-wrapper .layout .column.subnavigation {
+  /* subnavigation on the right, only displayed if children are avaliable */
+  float: right; }
+.layout-wrapper .layout .column.subnavigation h3 {
+  margin: 0 0 5px; }
+.layout-wrapper .layout .column.subnavigation ul {
+  list-style: none; }
+.layout-wrapper .layout .column.subnavigation ul li {
+  margin: 0;
+  border-top: 1px dashed #989898;
+  display: block; }
+.layout-wrapper .layout .column.subnavigation ul li.last {
+  border-bottom: 1px dashed #989898; }
+.layout-wrapper .layout .column.subnavigation ul li a {
+  display: block;
+  padding: 7px 0;
+  font-size: 12px; }
+.layout-wrapper .layout .column.subnavigation ul li a.current {
+  text-decoration: underline; }
+.layout-wrapper .layout .column.subnavigation ul li li {
+  padding-left: 15px; }
+.layout-wrapper .layout .column.big {
+  /* big content, size of 2 columns */
+  width: 62.333%; }
+.layout-wrapper .layout .column.full {
+  /* full size conteint, no sidebar */
+  width: auto;
+  float: none;
+  clear: both; }
+.layout-wrapper .layout .column * {
+  /* scale down elements if they are bigger than the content box */
+  /* make sure that you don't set a height on images that you expect to scale down, */
+  /* because if you do, this means only width scales, but height stays the same and ration gets lost */
+  max-width: 100%; }
+.layout-wrapper .layout .widgets-bottom .columns-3perrow-newrow {
+  /* we have 3 widgets in a row, after the 3rd element, create a new line */
+  clear: both; }
+.layout-wrapper .socialmedia-wrapper {
+  overflow: hidden;
+  text-align: center;
+  margin: -16px 0 0;
+  /* include all icons as css classes (eg: .socialmediaicons-facebook) */
+  /* see ../images/socialmediaicons for all avaliable icons */ }
+.layout-wrapper .socialmedia-wrapper .socialmedia {
+  padding: 5px;
+  margin: 2px 0;
+  display: inline-block;
+  /* use rgba background instead of opacity to avoid nested opacity */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80FFFFFF', endColorstr='#80FFFFFF', GradientType=0 );
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #dcdcdc;
+  -moz-box-shadow: 0px 0px 1px 0px #d0d0d0;
+  -webkit-box-shadow: 0px 0px 1px 0px #d0d0d0;
+  -o-box-shadow: 0px 0px 1px 0px #d0d0d0;
+  box-shadow: 0px 0px 1px 0px #d0d0d0;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px; }
+.layout-wrapper .socialmedia-wrapper .socialmedia a {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  height: 18px;
+  width: 18px;
+  margin: 0 2px;
+  display: inline-block;
+  text-indent: -9999px; }
+.layout-wrapper .socialmedia-wrapper .socialmedia a:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+  /* fade in effect */
+  -moz-transition: opacity 0.5s ease-out 0s;
+  -webkit-transition: opacity 0.5s ease-out 0s;
+  -o-transition: opacity 0.5s ease-out 0s;
+  transition: opacity 0.5s ease-out 0s;
+  text-decoration: none; }
+.layout-wrapper .socialmedia-wrapper .socialmediaicons-facebook {
+  background-position: 0 0; }
+.layout-wrapper .socialmedia-wrapper .socialmediaicons-flickr {
+  background-position: 0 -18px; }
+.layout-wrapper .socialmedia-wrapper .socialmediaicons-twitter {
+  background-position: 0 -36px; }
+.layout-wrapper .socialmedia-wrapper .socialmediaicons-youtube {
+  background-position: 0 -54px; }

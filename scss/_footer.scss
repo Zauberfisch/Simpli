@@ -1,0 +1,9 @@
+.footer {
+	margin: 10px 0;
+	text-align: center;
+	line-height: 18px;
+	.break {
+		/* don't remove the line break on default, we only use breaks in the footer on smaller screens */
+		display: none;
+	}
+}
