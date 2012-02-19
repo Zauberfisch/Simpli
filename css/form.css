@@ -65,11 +65,6 @@ textarea {
   font-size: 12px;
   border: 0; }
 
-/* SELECT DROPDOWN
----------------------------------------- */
-select {
-  width: auto; }
-
 /* LABELS
 ---------------------------------------- */
 .typography label {
