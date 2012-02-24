@@ -55,6 +55,7 @@ a {
 	.layout {
 		width: $layout-width;
 		max-width: $layout-max-width;
+		min-width: $layout-min-width;
 		margin: 0 auto;
 		padding: 0 0 10px 0;
 		background: $wrapper-background;

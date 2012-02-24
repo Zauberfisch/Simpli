@@ -24,6 +24,7 @@ $text-color-dark: darken($text-color, 15%);
 $link-color: darken($text-color, 30%);
 
 $layout-max-width: 900px; // max width, becuase we use % for width
+$layout-min-width: 350px;
 $layout-width: 90%; // using % for width to keep the website scaleable, but px will work well too
 $column-width: 29%;
 // calculate padding for columns, 3 columns with padding right and left, makes it 6 times padding

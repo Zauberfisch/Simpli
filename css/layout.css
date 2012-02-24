@@ -57,9 +57,11 @@ a:hover {
   -webkit-box-shadow: 0px 0px 1px 0px #d0d0d0;
   -o-box-shadow: 0px 0px 1px 0px #d0d0d0;
   box-shadow: 0px 0px 1px 0px #d0d0d0;
-  padding: 10px 10px 0 10px; }
+  padding: 10px 10px 0 10px;
+  min-width: 350px; }
 .header-wrapper .header {
   max-width: 900px;
+  min-width: 350px;
   width: 90%;
   margin: 0 auto; }
 .header-wrapper .header .logo {
@@ -106,6 +108,7 @@ a:hover {
   margin: 10px auto;
   width: 90%;
   max-width: 900px;
+  min-width: 350px;
   text-align: center;
   line-height: 18px; }
 .footer .break {
@@ -130,6 +133,7 @@ a:hover {
 .layout-wrapper .layout {
   width: 90%;
   max-width: 900px;
+  min-width: 350px;
   margin: 0 auto;
   padding: 0 0 10px 0;
   background: white;

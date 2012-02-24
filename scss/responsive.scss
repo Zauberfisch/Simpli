@@ -1,6 +1,6 @@
 @import "config.scss";
 
-/* handhelds, this applies to all handheld devices  */
+/* this applies to all handheld devices  */
 @media only screen and (max-width: 759px) {
 	.header-wrapper .header .navigation {
 		li {
@@ -22,7 +22,7 @@
 	}
 }
 
-/* this applies to handhelds in landscape orientation / tablests */
+/* this applies to handhelds in landscape orientation and tablests */
 @media only screen and (min-width: 480px) and (max-width: 759px) {
 	.layout-wrapper .layout .column {
 		/* set the width so we can palce 2 columns next to each other */
@@ -47,7 +47,9 @@
 }
 
 /* this applies to handhelds in portrait orientation */
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 479px),
+	   only screen and (-webkit-min-device-pixel-ratio : 1.5),
+	   only screen and (min-device-pixel-ratio : 1.5) {
 	.layout-wrapper .layout {
 		.column, .column.subnavigation, .column.big {
 			/* screen is to small to have 2 columns next to each other */

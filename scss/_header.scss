@@ -3,9 +3,11 @@
 	border-bottom: 1px solid darken($base-color, 5%);
 	@include box-shadow(0px 0px 1px 0px darken($base-color, 10%));
 	padding: 10px 10px 0 10px;
+	min-width: $layout-min-width;
 	
 	.header {
 		max-width: $layout-max-width;
+		min-width: $layout-min-width;
 		width: $layout-width;
 		margin: 0 auto;
 		
