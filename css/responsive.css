@@ -27,6 +27,7 @@
     /* in this layout we have 2 per row, so enable it  */
     clear: both; } }
 /* this applies to handhelds in portrait orientation */
+/* TODO test all mobile devices */
 @media only screen and (max-width: 479px),
 	   only screen and (-webkit-min-device-pixel-ratio : 1.5),
 	   only screen and (min-device-pixel-ratio : 1.5) {
