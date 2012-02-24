@@ -20,7 +20,7 @@
 		<![endif]-->
 	</head>
 	<body>
-		<div class="container">
+		<div id="top" class="container">
 			
 			<div class="header-wrapper">
 				<div class="header">
@@ -44,6 +44,9 @@
 			</div>
 			
 			<div class="footer">
+				<p class="left"><a class="icons-backtotop" href="#top"><% _t('BACKTOTOP', 'Back to top') %></a></p>
+				<%-- hardcoded link to your site notice, contact page or something like this, which doesn't really belong into the navigation --%>
+				<p class="right"><a class="icons-sitenotice" href="/sitenotice"><% _t('SITENOTICE', 'site notice') %></a></p>
 				<p>
 					<% _t('COPYRIGHT', 'Copyright') %> &copy; $Now.Year
 					<span class="seperator"> | </span><span class="break"><br /></span><%-- use seperator on desktop, and line break on handhelds --%>

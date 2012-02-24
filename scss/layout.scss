@@ -3,8 +3,12 @@
 
 @import "config.scss";
 
-/* get a sprite image from the social icons */
-@import "socialmediaicons/*.png";
+/* get a sprite image from the icons */
+/* include all icons as css classes (eg: .icon-facebook) */
+/* see ../images/icons for all avaliable icons */
+$icons-spacing: 20px;
+@import "icons/*.png";
+@include all-icons-sprites;
 
 	
 * {
@@ -150,8 +154,5 @@ a {
 				}
 			}
 		}
-		/* include all icons as css classes (eg: .socialmediaicons-facebook) */
-		/* see ../images/socialmediaicons for all avaliable icons */
-		@include all-socialmediaicons-sprites;
 	}
 }

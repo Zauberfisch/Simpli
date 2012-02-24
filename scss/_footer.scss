@@ -1,9 +1,27 @@
 .footer {
-	margin: 10px 0;
+	margin: 10px auto;
+	width: $layout-width;
+	max-width: $layout-max-width;
 	text-align: center;
 	line-height: 18px;
 	.break {
 		/* don't remove the line break on default, we only use breaks in the footer on smaller screens */
 		display: none;
+	}
+	.left, .right {
+		margin: 0 5px;
+		
+		a {
+			color: #727272;
+			font-weight: normal;
+			padding: 0 0 0 20px;
+			line-height: 18px;
+		}
+	}
+	.left {
+		float: left;
+	}
+	.right {
+		float: right;
 	}
 }

@@ -1,6 +1,29 @@
-/* get a sprite image from the social icons */
-.socialmediaicons-sprite, .layout-wrapper .socialmedia-wrapper .socialmediaicons-facebook, .layout-wrapper .socialmedia-wrapper .socialmediaicons-flickr, .layout-wrapper .socialmedia-wrapper .socialmediaicons-twitter, .layout-wrapper .socialmedia-wrapper .socialmediaicons-youtube {
-  background: url('../images/socialmediaicons-s19e97c8559.png') no-repeat; }
+/* get a sprite image from the icons */
+/* include all icons as css classes (eg: .icon-facebook) */
+/* see ../images/icons for all avaliable icons */
+.icons-sprite, .icons-backtotop, .icons-facebook, .icons-flickr, .icons-gallery, .icons-sitenotice, .icons-twitter, .icons-youtube {
+  background: url('../images/icons-s16acbcd365.png') no-repeat; }
+
+.icons-backtotop {
+  background-position: 0 0; }
+
+.icons-facebook {
+  background-position: 0 -38px; }
+
+.icons-flickr {
+  background-position: 0 -76px; }
+
+.icons-gallery {
+  background-position: 0 -114px; }
+
+.icons-sitenotice {
+  background-position: 0 -148px; }
+
+.icons-twitter {
+  background-position: 0 -186px; }
+
+.icons-youtube {
+  background-position: 0 -224px; }
 
 * {
   margin: 0;
@@ -80,12 +103,25 @@ a:hover {
   font-weight: bold; }
 
 .footer {
-  margin: 10px 0;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 900px;
   text-align: center;
   line-height: 18px; }
 .footer .break {
   /* don't remove the line break on default, we only use breaks in the footer on smaller screens */
   display: none; }
+.footer .left, .footer .right {
+  margin: 0 5px; }
+.footer .left a, .footer .right a {
+  color: #727272;
+  font-weight: normal;
+  padding: 0 0 0 20px;
+  line-height: 18px; }
+.footer .left {
+  float: left; }
+.footer .right {
+  float: right; }
 
 /* Layout
 ---------------------------------------- */
@@ -153,9 +189,7 @@ a:hover {
 .layout-wrapper .socialmedia-wrapper {
   overflow: hidden;
   text-align: center;
-  margin: -16px 0 0;
-  /* include all icons as css classes (eg: .socialmediaicons-facebook) */
-  /* see ../images/socialmediaicons for all avaliable icons */ }
+  margin: -16px 0 0; }
 .layout-wrapper .socialmedia-wrapper .socialmedia {
   padding: 5px;
   margin: 2px 0;
@@ -191,11 +225,3 @@ a:hover {
   -o-transition: opacity 0.5s ease-out 0s;
   transition: opacity 0.5s ease-out 0s;
   text-decoration: none; }
-.layout-wrapper .socialmedia-wrapper .socialmediaicons-facebook {
-  background-position: 0 0; }
-.layout-wrapper .socialmedia-wrapper .socialmediaicons-flickr {
-  background-position: 0 -18px; }
-.layout-wrapper .socialmedia-wrapper .socialmediaicons-twitter {
-  background-position: 0 -36px; }
-.layout-wrapper .socialmedia-wrapper .socialmediaicons-youtube {
-  background-position: 0 -54px; }
