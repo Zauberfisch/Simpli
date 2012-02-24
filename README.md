@@ -2,7 +2,7 @@
 
 ### Maintainers ###
 
- * [Hannes Wizany](http://www.hanneswizany.com) ```<hwizany (a) gmx (.) at>```
+ * [Hannes Wizany](http://www.hanneswizany.com) ```<hanneswizany (a) jungbrunnen (.) xxx>```
  * [zauberfisch](http://zauberfisch.at) ```<admin (a) zauberfisch (.) at>```
 
 ### Help / Tutorials ###
