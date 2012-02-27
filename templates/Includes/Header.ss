@@ -4,7 +4,7 @@
 			<h1>$SiteConfig.Title</h1>
 			<p>$SiteConfig.Tagline</p>
 		</div>
-		$SearchForm
+		<%-- $SearchForm --%>
 		<% include Navigation %>
 		<div class="clear"></div>
 	</div>
